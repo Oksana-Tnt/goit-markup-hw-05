@@ -21,7 +21,7 @@
             <a href="./index.html" class="logo logo-header link">Web<span class="header-brand">Studio</span></a>               
            
             <ul class="site-menu list">
-                <li class="item"><a href="./index.html" class="menu link">Studio</a></li>
+                <li class="item current-link"><a href="./index.html" class="menu link current-page">Studio</a></li>
                 <li class="item"><a href="./portfolio.html" class="menu link">Portfolio</a></li>
                 <li class="item"><a href="" class="menu link">Contacts</a></li>
             </ul>            
@@ -46,7 +46,7 @@
         <section class="hero">
             
             <h1 class="hero-title">Effective Solutions for Your Business</h1>
-            <button type="button" class="button primary">Order Service</button>
+            <button type="button" class="button primary" data-modal-open>Order Service</button>
            
         </section>
     <!--Section Features-->
@@ -393,9 +393,16 @@
                 </li>
             </ul>
         </div>
-
-
     </div>
 </footer>
+<!--Modal wiev-->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="btn-close" data-modal-close></button>               
+        </div>
+    </div>
+
+<!--JS-->
+<script src="./js/modal.js"></script>
 </body>
 </html>
