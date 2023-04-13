@@ -15,6 +15,8 @@
         --color-icon: #afb1b8;
         --items: 3;
         --indent: 24px;
+        --duration: 250ms;
+        --function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -102,10 +104,9 @@ h1,h2,h3,h4,h5,h6,p {
     height: 100%;
     background-color: var(--color-iris);
 
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition: background-color var(--duration) var(--function);   
+ }
+
 .icon-set {
     display: flex;
     justify-content: center;
@@ -155,9 +156,8 @@ h1,h2,h3,h4,h5,h6,p {
     color: var(--color-white);
     background-color: var(--color-iris);
 
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--duration) var(--function); 
+
 }
 
 .button.secondary {
@@ -167,9 +167,11 @@ h1,h2,h3,h4,h5,h6,p {
     background-color: var(--color-cloud);
     border: 1px solid var(--color-cornflower);
 
-    transition-property: color, background-color, border, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--duration) var(--function); 
+    transition: background-color var(--duration) var(--function); 
+    transition: border var(--duration) var(--function); 
+    transition: box-shadow var(--duration) var(--function); 
+
 }
 
 .button.primary:hover,
@@ -250,9 +252,7 @@ h1,h2,h3,h4,h5,h6,p {
 .header-brand {
     
     color: var(--color-navy-blue);
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--duration) var(--function); 
 }
 
 .header-brand:hover,
@@ -273,6 +273,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .site-menu .menu {
+    position: relative;
     display: block;
     padding: 24px 0;
    
@@ -283,28 +284,53 @@ h1,h2,h3,h4,h5,h6,p {
 
     color: var(--color-navy-blue);
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--duration) var(--function); 
 }
 
 .site-menu .menu:hover,
 .site-menu .menu:focus
 {
     color:var(--color-ocean);
+
 }
 
 .site-menu .current-page {
     color: var(--color-iris);
+ 
 }
-
+.site-menu .current-link {
+    position: relative;
+ 
+}
 .site-menu .current-link::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     display: block;  
     content: "";
     width: 100%;
     height: 4px;
     background-color: var(--color-ocean);    
     border-radius: 2px;
+}
+
+.site-menu .menu::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;  
+    content: "";
+    width: 100%;
+    height: 4px;
+   transform: scaleX(0);
+
+    background-color: var(--color-ocean);    
+    border-radius: 2px;
+
+    transition: transform var(--duration) var(--function); 
+}  
+.site-menu .menu:hover::after{
+    transform: scaleX(1);
 }
 
 .adress{
@@ -327,9 +353,7 @@ h1,h2,h3,h4,h5,h6,p {
 
     color: var(--color-slate);
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--duration) var(--function); 
 }
 
 .adress-list .contact:hover,
@@ -474,9 +498,8 @@ h1,h2,h3,h4,h5,h6,p {
 
     color: var(--color-icon);
 
-    transition-property: color, border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--duration) var(--function); 
+    transition: border-color var(--duration) var(--function); 
 }
 
 .link-customers:hover,
@@ -496,7 +519,9 @@ h1,h2,h3,h4,h5,h6,p {
 
 .icon-customers {
  fill: currentColor;
+ 
 }
+
 
 /**
   |============================
@@ -526,9 +551,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 .footer-brand{
     color: var(--color-cloud);
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--duration) var(--function); 
 }
 
 .footer-brand:hover,
@@ -585,9 +608,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 .portfolio-item {
     display: block; 
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--duration) var(--function); 
 }
 
 
@@ -620,9 +641,7 @@ h1,h2,h3,h4,h5,h6,p {
     background-color: var(--color-iris);
     transform: translateY(100%);
 
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--duration) var(--function); 
     
 }
 
