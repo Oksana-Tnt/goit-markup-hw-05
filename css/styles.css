@@ -487,6 +487,14 @@ h1,h2,h3,h4,h5,h6,p {
   |============================
 */
 
+.list-customers {
+    --items: 6;
+}
+
+.customer-card {
+    height: 88px;
+}
+
 .link-customers{
     display: flex;
     align-items: center;
@@ -509,17 +517,8 @@ h1,h2,h3,h4,h5,h6,p {
    
 }
 
-.list-customers{
-    --items: 6;
-}
-
-.customer-card {
-    height: 88px;
-}
-
 .icon-customers {
- fill: currentColor;
- 
+ fill: currentColor; 
 }
 
 
