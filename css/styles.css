@@ -166,11 +166,12 @@ h1,h2,h3,h4,h5,h6,p {
 
     background-color: var(--color-cloud);
     border: 1px solid var(--color-cornflower);
+    border-radius: 4px;
 
-    transition: color var(--duration) var(--function); 
-    transition: background-color var(--duration) var(--function); 
-    transition: border var(--duration) var(--function); 
-    transition: box-shadow var(--duration) var(--function); 
+    transition: color var(--duration) var(--function),
+                background-color var(--duration) var(--function), 
+                border var(--duration) var(--function),
+                box-shadow var(--duration) var(--function); 
 
 }
 
@@ -186,8 +187,8 @@ h1,h2,h3,h4,h5,h6,p {
 
     border: 1px solid transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-        0px 2px 1px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
+                0px 2px 1px rgba(0, 0, 0, 0.08),
+                0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /**
@@ -233,11 +234,10 @@ h1,h2,h3,h4,h5,h6,p {
 */
 
 .header {
-    
     border-bottom: 1px solid var(--color-cornflower);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 1px 6px rgba(46, 47, 66, 0.08);
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .logo-header{
@@ -264,19 +264,20 @@ h1,h2,h3,h4,h5,h6,p {
     display: flex;
     align-items: center;
     margin-right: auto;
-}
+ }
 
 .site-menu {
     display: flex;
     margin-left: 76px;
-    gap: 40px;   
+
+    gap: 40px;  
 }
 
 .site-menu .menu {
     position: relative;
     display: block;
     padding: 24px 0;
-   
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;  
@@ -312,6 +313,8 @@ h1,h2,h3,h4,h5,h6,p {
     height: 4px;
     background-color: var(--color-ocean);    
     border-radius: 2px;
+    margin-bottom: -1px;
+   
 }
 
 .site-menu .menu::after {
@@ -322,10 +325,11 @@ h1,h2,h3,h4,h5,h6,p {
     content: "";
     width: 100%;
     height: 4px;
-   transform: scaleX(0);
+    transform: scaleX(0);
 
     background-color: var(--color-ocean);    
     border-radius: 2px;
+    margin-bottom: -1px;
 
     transition: transform var(--duration) var(--function); 
 }  
@@ -506,8 +510,8 @@ h1,h2,h3,h4,h5,h6,p {
 
     color: var(--color-icon);
 
-    transition: color var(--duration) var(--function); 
-    transition: border-color var(--duration) var(--function); 
+    transition: color var(--duration) var(--function), 
+         border-color var(--duration) var(--function); 
 }
 
 .link-customers:hover,
@@ -613,8 +617,8 @@ h1,h2,h3,h4,h5,h6,p {
 .portfolio-item:hover,
 .portfolio-item:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 
@@ -694,7 +698,7 @@ h1,h2,h3,h4,h5,h6,p {
   width: 100%;
   height: 100%;
 
-  background-color: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+  background-color: rgba(46, 47, 66, 0.4);
  
   transition: opacity var(--duration) var(--function);
  
@@ -730,9 +734,9 @@ h1,h2,h3,h4,h5,h6,p {
 
 .btn-close {
     position: absolute;
-    right: 0;
-    top: 0;
-
+    right: 24px;
+    top: 24px;
+  
     display: block;
     width: 24px;
     height: 24px;       
